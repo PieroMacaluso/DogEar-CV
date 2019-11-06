@@ -5,4 +5,4 @@ jobs:
        - image: koppor/texlive
      steps:
        - checkout
-       - run: latexmk examples/cv.tex
+       - run: xelatex examples/cv.tex
