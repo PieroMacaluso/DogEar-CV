@@ -13,13 +13,15 @@
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 %
 
+
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
+
 % Configure page margins with geometry
-\geometry{left=1.0cm, top=.8cm, right=1.0cm, bottom=1.4cm, footskip=.5cm}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -27,13 +29,9 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-% \colorlet{awesome}{awesome-orange}
+\colorlet{awesome}{awesome-red}
 % Uncomment if you would like to specify your own color
-\definecolor{awesome}{HTML}{007c90}
-\definecolor{awesome-accent}{HTML}{fe5722}
-\definecolor{awesome-shadow}{HTML}{00acc2}
-
-
+% \definecolor{awesome}{HTML}{CA63A8}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -43,11 +41,10 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{false}
+\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
-% \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-\renewcommand{\acvHeaderSocialSep}{\quad}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
 %-------------------------------------------------------------------------------
@@ -55,17 +52,17 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle]{profile.jpg}
-\name{Piero}{Macaluso}
-% \position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\position{MSc Computer Science Engineering Student at Politecnico di Torino}
-\address{Via Galileo Galilei, 154 - Sanremo (IM) 18038 - Italy}
+% \photo{./examples/profile.png}
+\name{Claud D.}{Park}
+\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
+\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
 
-\mobile{(+39) 334-7150020}
-\email{info@pieromacaluso.com}
-\homepage{www.pieromacaluso.com}
-\github{pieromacaluso}
-\linkedin{pieromacaluso}
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+\homepage{www.posquit0.com}
+\github{posquit0}
+
+\linkedin{posquit0}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -75,29 +72,39 @@
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
-% 4
 % \extrainfo{extra informations}
+
+\quote{``Be the change that you want to see in the world."}
+
 
 %-------------------------------------------------------------------------------
 \begin{document}
+
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader
+
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Piero Macaluso~~~·~~~Curriculum Vitae}
+  {Claud D. Park~~~·~~~Curriculum Vitae}
   {\thepage}
+
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/education.tex}
-\input{cv/experience.tex}
 \input{cv/skills.tex}
+\input{cv/experience.tex}
 \input{cv/extracurricular.tex}
-\input{cv/ending.tex}
+\input{cv/honors.tex}
+\input{cv/presentation.tex}
+\input{cv/writing.tex}
+\input{cv/committees.tex}
+
+
 %-------------------------------------------------------------------------------
 \end{document}
