@@ -94,7 +94,7 @@
 
 \pgfdeclarelayer{bg}    % declare background layer
 \pgfsetlayers{bg,main}  % set the order of the layers (main is the standard layer)
-\newmdenv[topline=false,rightline=false,bottomline=false,skipabove=0pt,skipbelow=0pt,innertopmargin=1mm,innerbottommargin=1mm,innerleftmargin=1.5mm,leftmargin=-5pt,outerlinewidth=0pt,linecolor=awesome,linewidth=0.5pt]{leftbot}
+\newmdenv[topline=false,rightline=false,bottomline=false,skipabove=0pt,skipbelow=0pt,innertopmargin=1mm,innerbottommargin=1mm,innerleftmargin=3mm,leftmargin=-5pt,outerlinewidth=0pt,linecolor=awesome,linewidth=0.5pt]{leftbot}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -200,28 +200,28 @@
 % For fundamental structures
 \newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{awesome} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{awesome} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\scshape\color{awesome-accent} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{11pt}{1em}\bodyfont\color{awesome-accent} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{white}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{white}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{white}\@sectioncolor #1}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\textcolor{white}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
-\newlength{\misura}
-\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{white}\settowidth{\misura}{#1}\begin{tikzpicture}[overlay]\fill [awesome-accent] (-4.8pt,-4pt) rectangle (\misura + 10pt,11pt);\end{tikzpicture}#1%\tikz[overlay]{ \draw [awesome,line width=.2ex] (-1ex,-1ex) -- (-1ex,2ex) -- (\textwidth,2ex); }%
-}}
+\newlength{\lunghezzamisura}
+\newlength{\altezzamisura}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{white}\settowidth{\lunghezzamisura}{#1}\begin{tikzpicture}[overlay]\fill [awesome-accent] (-3mm,-4pt) rectangle (\lunghezzamisura + 10pt,11pt);\end{tikzpicture}#1\vspace{-0.5mm}}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{awesome}#1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome}#1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{graytext}#1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\color{awesome}#1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
 \newcommand*{\subentrypositionstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\subentrydatestyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\subentrydatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{graytext} #1}}
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
@@ -578,24 +578,22 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[2]{%
-\vspace{\acvSectionTopSkip}
-\settowidth{\misura}{\sectionstyle{#1}}\begin{tikzpicture}[overlay]
-\fill [awesome] (-20pt,-5pt) rectangle (\misura + 20pt,16pt);
-%\draw [awesome](-5pt,-4pt) -- (-5pt,-2000pt);
+{
+%\vspace{\acvSectionTopSkip}
+\settowidth{\lunghezzamisura}{\sectionstyle{#1}}
+\settoheight{\altezzamisura}{#1}
+\begin{tikzpicture}[overlay]
+\fill [awesome] (-20pt,-5pt) rectangle (\lunghezzamisura + 20pt,14pt);
 \draw [line width=0.5pt, awesome](-4.8pt, -5pt) -- (-4.8pt,-10pt);
 \fill[awesome-shadow] (-5pt, -5pt) -- (-5pt,-10pt) -- (-20pt,-5pt) -- cycle;
 \end{tikzpicture}
 \sectionstyle{#1}
-  \phantomsection
-  \color{gray}\vhrulefill{0pt}
-  \vspace{5pt}
-  \begin{leftbot}
-    #2
-  \end{leftbot}
-  %\begin{tikzpicture}[overlay]
-  %  \draw [awesome](-5pt,+10pt) -- (\the\dimexpr\zposx{top-\cvariable}sp-\zposx{bottom-\cvariable}sp-5pt,\the\dimexpr\zposy{top-\cvariable}sp-\zposy{bottom-\cvariable}sp);
-  %\end{tikzpicture}
-
+\vspace{8pt}
+\vspace{-\altezzamisura}
+\vspace{5pt}
+%  \phantomsection
+\begin{leftbot}\vspace{0mm}#2\end{leftbot}
+}
 }
 
 % Define a subsection for CV
@@ -603,7 +601,7 @@
 \newcommand{\cvsubsection}[1]{%
   \vspace{\acvSectionContentTopSkip}
   %\vspace{-3mm}
-\settowidth{\misura}{\subsectionstyle{#1}}\begin{tikzpicture}[overlay]\fill [awesome-accent] (-4.8pt,-4pt) rectangle (\misura + 10pt,11pt);\end{tikzpicture}
+\settowidth{\lunghezzamisura}{\subsectionstyle{#1}}\begin{tikzpicture}[overlay]\fill [awesome-accent] (-3mm,-4pt) rectangle (\lunghezzamisura + 10pt,11pt);\end{tikzpicture}
   \subsectionstyle{#1}
   \phantomsection
 }
@@ -730,8 +728,8 @@
 \newcommand{\lettersection}[2]{%
   \par\addvspace{2.5ex}
   \phantomsection{}
-  \settowidth{\misura}{\lettersectionstyle{#1}}\begin{tikzpicture}[overlay]
-    \fill [awesome] (-20pt,-5pt) rectangle (\misura + 20pt,16pt);
+  \settowidth{\lunghezzamisura}{\lettersectionstyle{#1}}\begin{tikzpicture}[overlay]
+    \fill [awesome] (-20pt,-5pt) rectangle (\lunghezzamisura + 20pt,16pt);
     %\draw [awesome](-5pt,-4pt) -- (-5pt,-2000pt);
     \draw [line width=0.5pt, awesome](-4.8pt, -5pt) -- (-4.8pt,-10pt);
     \fill[awesome-shadow] (-5pt, -5pt) -- (-5pt,-10pt) -- (-20pt,-5pt) -- cycle;

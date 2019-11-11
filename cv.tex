@@ -19,7 +19,7 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 % Configure page margins with geometry
-\geometry{left=1.0cm, top=.8cm, right=1.0cm, bottom=1.4cm, footskip=.5cm}
+\geometry{left=0.8cm, top=.3cm, right=0.3cm, bottom=0.2cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -61,16 +61,16 @@
 \position{MSc Computer Science Engineering Student at Politecnico di Torino}
 \address{Via Galileo Galilei, 154 - Sanremo (IM) 18038 - Italy}
 
-\mobile{(+39) 334-7150020}
 \email{info@pieromacaluso.com}
 \homepage{www.pieromacaluso.com}
 \github{pieromacaluso}
 \linkedin{pieromacaluso}
+\mobile{(+39) 334-7150020}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
+\skype{piero.macaluso@outlook.com}
+% \reddit{pieromack}
 % \medium{madium-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
@@ -82,22 +82,22 @@
 \begin{document}
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader[L]
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
   {Piero Macaluso~~~·~~~Curriculum Vitae}
   {\thepage}
-
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/education.tex}
 \input{cv/experience.tex}
-\input{cv/skills.tex}
 \input{cv/extracurricular.tex}
+\input{cv/skills.tex}
+\input{cv/outside.tex}
 \input{cv/ending.tex}
 %-------------------------------------------------------------------------------
 \end{document}
