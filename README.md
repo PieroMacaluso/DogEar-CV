@@ -7,11 +7,8 @@
 </p>
 
 <div align="center">
-  <a href="https://www.paypal.me/posquit0">
-    <img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-blue.svg" />
-  </a>
-  <a href="https://circleci.com/gh/posquit0/Awesome-CV">
-    <img alt="CircleCI" src="https://circleci.com/gh/posquit0/Awesome-CV.svg?style=shield" />
+  <a href="https://circleci.com/gh/pieromacaluso/DogEar-CV">
+    <img alt="CircleCI" src="https://circleci.com/gh/pieromacaluso/DogEar-CV.svg?style=shield" />
   </a>
   <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/cv.pdf">
     <img alt="Example CV" src="https://img.shields.io/badge/cv-pdf-green.svg" />
@@ -23,9 +20,9 @@
 
 <br />
 
-## What is Awesome CV?
+## What is DogEar CV?
 
-**Dogear CV** is LaTeX template for a **CV(Curriculum Vitae)**, **Résumé** or **Cover Letter** inspired by [Awesome CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). It is easy to customize your own template, especially since it is really written by a clean, semantic markup.
+**DogEar CV** is LaTeX template for a **CV(Curriculum Vitae)**, **Résumé** or **Cover Letter** inspired by [Awesome CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). This template can be used to build up your personal curriculum easily changing the main features of the theme (colours and paragraphs). It could be also a solid baseline from which to develop your personal theme.
 
 ## Preview
 
@@ -49,7 +46,7 @@ You can see [PDF](examples/coverletter.pdf)
 
 #### Requirements
 
-A full TeX distribution is assumed.  [Various distributions for different operating systems (Windows, Mac, \*nix) are available](http://tex.stackexchange.com/q/55437) but TeX Live is recommended.
+A full TeX distribution is assumed.  [Various distributions for different operating systems (Windows, Mac, \*nix) are available](http://tex.stackexchange.com/q/55437) but TeX Live or MikTek is recommended.
 You can [install TeX from upstream](http://tex.stackexchange.com/q/1092) (recommended; most up-to-date) or use `sudo apt-get install texlive-full` if you really want that.  (It's generally a few years behind.)
 
 #### Usage
