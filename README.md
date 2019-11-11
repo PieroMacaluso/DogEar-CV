@@ -7,7 +7,7 @@
 </p>
 
 <div align="center">
-  <a href="https://circleci.com/gh/posquit0/Awesome-CV">
+  <a href="https://circleci.com/gh/pieromacaluso/DogEar-CV">
     <img alt="CircleCI" src="https://circleci.com/gh/pieromacaluso/DogEar-CV.svg?style=shield" />
   </a>
   <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/cv.pdf">
