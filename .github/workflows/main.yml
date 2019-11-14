@@ -1,5 +1,9 @@
 name: build_latex_docs
-on: [push]
+on:
+  push:
+    paths:
+    - '**.tex'
+    - '**.cls'
 jobs:
   build_latex:
     runs-on: ubuntu-latest
