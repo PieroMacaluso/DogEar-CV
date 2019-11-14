@@ -10,6 +10,9 @@
   <a href="https://circleci.com/gh/pieromacaluso/DogEar-CV">
     <img alt="CircleCI" src="https://circleci.com/gh/pieromacaluso/DogEar-CV.svg?style=shield" />
   </a>
+  <a href="https://github.com/pieromacaluso/DogEar-CV">
+    <img alt="GithubActions" src="https://github.com/pieromacaluso/DogEar-CV/workflows/build_latex_docs/badge.svg" />
+  </a>
   <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/cv.pdf">
     <img alt="Example CV" src="https://img.shields.io/badge/cv-pdf-green.svg" />
   </a>
