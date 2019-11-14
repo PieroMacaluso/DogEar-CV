@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: build_latex_docs
 on: [push]
 jobs:
   build_latex:
@@ -9,5 +9,20 @@ jobs:
       - name: Compile cv_it.tex
         uses: dante-ev/latex-action@master
         with:
-          root_file: cv.tex
+          root_file: cv_it.tex
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+      - name: Compile cv_en.tex
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: cv_en.tex
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+      - name: Compile coverletter_it.tex
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: coverletter_it.tex
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+      - name: Compile coverletter_en.tex
+        uses: dante-ev/latex-action@master
+        with:
+          root_file: coverletter_en.tex
           args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
