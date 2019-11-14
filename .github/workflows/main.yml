@@ -9,8 +9,5 @@ jobs:
       - name: Compile cv_it.tex
         uses: dante-ev/latex-action@master
         with:
-          root_file: cv_it.tex
-      - name: Compile cv_en.tex
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: cv_en.tex
+          root_file: cv.tex
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
