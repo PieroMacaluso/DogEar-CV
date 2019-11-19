@@ -1,12 +1,16 @@
 <h1 align="center">
-  Dogear CV
+    <img alt="GithubActions" src="logo.svg" width="200px"/>
+  <p>DogEar CV</p>
 </h1>
 
 <p align="center">
-  LaTeX template for your outstanding job application
+  A plain and simple LaTeX template for your astonishing job application.
 </p>
 
 <div align="center">
+<a href="https://github.com/pieromacaluso/DogEar-CV">
+    <img alt="Status" src="https://img.shields.io/badge/Status-Work%20In%20Progress-yellow" />
+  </a>
   <a href="https://github.com/pieromacaluso/DogEar-CV">
     <img alt="GithubActions" src="https://github.com/pieromacaluso/DogEar-CV/workflows/build_latex_docs/badge.svg" />
   </a>
@@ -16,17 +20,34 @@
   <a href="https://raw.githubusercontent.com/posquit0/Awesome-CV/master/examples/coverletter.pdf">
     <img alt="Example Coverletter" src="https://img.shields.io/badge/coverletter-pdf-green.svg" />
   </a>
+  <a href="https://paypal.me/PieroMacaluso">
+    <img alt="Status" src="https://img.shields.io/badge/Donate-PayPal-blue" />
+  </a>
 </div>
 
 <br />
 
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [What is DogEar CV?](#what-is-dogear-cv)
+- [Preview](#preview)
+  - [Curriculum Vitae](#curriculum-vitae)
+  - [Cover Letter](#cover-letter)
+- [How to Use](#how-to-use)
+  - [Local Compilation](#local-compilation)
+    - [Requirements](#requirements)
+    - [Usage](#usage)
+  - [Overleaf](#overleaf)
+- [Credit](#credit)
+- [Contact](#contact)
+
 ## What is DogEar CV?
 
-**DogEar CV** is LaTeX template for a **CV(Curriculum Vitae)**, **Résumé** or **Cover Letter** inspired by [Awesome CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv). This template can be used to build up your personal curriculum easily changing the main features of the theme (colours and paragraphs). It could be also a solid baseline from which to develop your personal theme.
+**DogEar CV** is LaTeX template for a **CV(Curriculum Vitae)** or a **Cover Letter** inspired by [Awesome CV](https://github.com/posquit0/Awesome-CV). This template can be used to build up your personal curriculum easily changing the main features of the theme (colours and paragraphs). It could be also a solid baseline from which to develop your personal theme.
 
 ## Preview
 
-#### Curriculum Vitae
+### Curriculum Vitae
 
 You can see [PDF](examples/cv.pdf)
 
@@ -34,7 +55,7 @@ You can see [PDF](examples/cv.pdf)
 |:---:|:---:|
 | [![Résumé](examples/cv-0.png)](examples/cv.pdf)  | [![Résumé](examples/cv-1.png)](examples/cv.pdf) |
 
-#### Cover Letter
+### Cover Letter
 
 You can see [PDF](examples/coverletter.pdf)
 
@@ -43,6 +64,8 @@ You can see [PDF](examples/coverletter.pdf)
 | [![Cover Letter(Traditional)](examples/coverletter.png)](examples/coverletter.pdf)  | [![Cover Letter(Awesome)](examples/coverletter-nosection.png)](examples/coverletter.pdf) |
 
 ## How to Use
+
+### Local Compilation
 
 #### Requirements
 
@@ -59,6 +82,10 @@ $ xelatex {your-cv}.tex
 
 This should result in the creation of ``{your-cv}.pdf``
 
+
+### Overleaf
+
+**Coming Soon**
 
 ## Credit
 
