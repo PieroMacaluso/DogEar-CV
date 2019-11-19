@@ -1,12 +1,12 @@
-%% Start of file `awesome-cv.cls'.
-% Awesome CV Class File
+%% Start of file `dogear-cv.cls'.
+% DogEar CV Class File
 %
 % This class has been downloaded from:
-% https://github.com/posquit0/Awesome-CV
+% https://github.com/pieromacaluso/DogEar-CV
 %
 % Author:
-% Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
+% Piero Macaluso <info@pieromacaluso.com>
+% https://www.pieromacaluso.com
 %
 % Notes:
 % 1) This class file defines the structure and layout of the template file (cv.tex, resume.tex).
@@ -20,7 +20,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
+\ProvidesClass{dogear-cv}[2019/11/10 v1.0.0 DogEar Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
